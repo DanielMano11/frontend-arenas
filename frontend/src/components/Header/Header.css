@@ -1,0 +1,84 @@
+.banner {
+  background: linear-gradient(to right, rgba(11, 35, 38, 0.92), rgba(11, 35, 38, 0.2)), url('/images/header/main.png');
+  background-size: cover;
+  background-position: center right;
+  padding: 70px 20px;
+  color: #ffffff;
+}
+
+.banner .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.conteudo-banner {
+  max-width: 520px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.linha {
+  width: 30px;
+  height: 3px;
+  background-color: #f2994a;
+}
+
+.tag p {
+  font-weight: bold;
+  font-size: 13px;
+  margin: 0;
+}
+
+.titulo-banner {
+  font-size: 50px;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.1;
+  margin: 0 0 20px 0;
+}
+
+.laranja {
+  color: #f2994a;
+}
+
+.frase-forte {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.frase-comum {
+  font-size: 15px;
+  color: #e0e0e0;
+  margin: 0 0 25px 0;
+}
+
+.botao-banner {
+  display: inline-block;
+  background-color: #f2994a;
+  color: #0f2b2e;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+
+.botao-banner:hover {
+  background-color: #e67e22;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 40px 15px;
+  }
+
+  .titulo-banner {
+    font-size: 34px;
+  }
+}
