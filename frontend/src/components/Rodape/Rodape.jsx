@@ -48,9 +48,6 @@ export function Rodape() {
         <p className="rodape-copyright">
           © 2026 Arena Solar. Todos os direitos reservados.
         </p>
-        <p className="rodape-slogan">
-          Jogue mais. Viva melhor.
-        </p>
       </div>
     </footer>
   );

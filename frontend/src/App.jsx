@@ -18,9 +18,7 @@ function App() {
               <small>POR QUE JOGAR AQUI</small>
               <h2>A experiência <span>da nossa arena</span></h2>
             </div>
-            <p>
-              Performance, bem-estar e convivência sob o sol.
-            </p>
+
           </header>
 
           <div className="experiencias">
@@ -54,7 +52,6 @@ function App() {
               <small>MODALIDADES</small>
               <h2>Seu jogo. <span>Sua areia.</span></h2>
             </div>
-            <p>Três modalidades. A mesma energia.</p>
           </header>
 
           <div className="esportes">

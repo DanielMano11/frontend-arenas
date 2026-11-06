@@ -68,7 +68,7 @@ export function Cadastro() {
           </div>
 
           <h2 className="titulo-cadastro">
-            GARANTA SEU CADASTRO<br />
+            REALIZE SEU CADASTRO<br />
             DE ATLETA NA ARENA
           </h2>
 
@@ -168,10 +168,6 @@ export function Cadastro() {
             <button type="submit" className="botao-enviar-cadastro">
               CONFIRMAR CADASTRO NA ARENA
             </button>
-
-            <p className="seguranca-dados">
-              Seus dados ficam seguros com a gente
-            </p>
           </form>
         </div>
       </div>

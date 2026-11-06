@@ -7,8 +7,7 @@ export function Sobre() {
         <div className="sobre-texto">
           <small className="sobre-tag">SOBRE A ARENA</small>
           <h2 className="sobre-titulo">
-            O ponto de encontro <br />
-            <span>do esporte de areia</span>
+            Arena Solar <br />
           </h2>
           <p>
             A <strong>Arena Solar</strong> nasceu para reunir atletas, amigos e
@@ -36,13 +35,6 @@ export function Sobre() {
             <span>Modalidades</span>
             <p>Quadras preparadas para Beach Tennis, Vôlei de Praia e Futevôlei.</p>
           </div>
-
-          <div className="card-destaque-sobre">
-            <strong>100%</strong>
-            <span>Estrutura completa</span>
-            <p>Vestiários, deck de convivência, som ambiente e aluguel de materiais.</p>
-          </div>
-
           <div className="card-destaque-sobre">
             <strong>06h–23h</strong>
             <span>Todos os dias</span>
