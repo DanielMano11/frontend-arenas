@@ -3,24 +3,57 @@ import './Rodape.css';
 export function Rodape() {
   return (
     <footer className="rodape">
-      <div className="container">
-        <div className="rodape-info">
-          <h3>ARENA SOLAR</h3>
-          <p>O melhor espaço para esportes de areia da região.</p>
+      <div className="container rodape-principal">
+        <div className="rodape-coluna rodape-marca">
+          <a href="#inicio">
+            <img src="/images/logo.png" alt="Arena Solar" className="rodape-logo" />
+          </a>
+          <p className="rodape-descricao">
+            Esporte, sol e conexão em uma estrutura feita para você viver o melhor da areia.
+          </p>
         </div>
 
-        <div className="rodape-contato">
-          <p>Rua das Palmeiras, 120 - Tabuleiro do Norte, CE</p>
-          <p>Segunda a Sábado: 06h às 22h | Domingo: 07h às 18h</p>
+        <div className="rodape-coluna">
+          <h4 className="rodape-titulo">SOBRE A ARENA</h4>
+          <ul className="rodape-links">
+            <li><a href="#sobre">Nossa experiência</a></li>
+            <li><a href="#estrutura">Estrutura</a></li>
+            <li><a href="#cadastro">Seja um atleta</a></li>
+          </ul>
+        </div>
+
+        <div className="rodape-coluna">
+          <h4 className="rodape-titulo">MODALIDADES</h4>
+          <ul className="rodape-links">
+            <li><a href="#modalidades">Beach Tennis</a></li>
+            <li><a href="#modalidades">Vôlei de Praia</a></li>
+            <li><a href="#modalidades">Futevôlei</a></li>
+          </ul>
+        </div>
+
+        <div className="rodape-coluna rodape-contato">
+          <h4 className="rodape-titulo">CONTATO & HORÁRIOS</h4>
+          <div className="rodape-horario">
+            <span className="rodape-dias">Segunda a domingo</span>
+            <strong className="rodape-horas">06:00 — 23:00</strong>
+          </div>
+          <div className="rodape-info-contato">
+            <a href="mailto:contato@arenasolar.com.br" className="rodape-email">contato@arenasolar.com.br</a>
+            <a href="tel:1134567890" className="rodape-telefone">(11) 3456-7890</a>
+          </div>
         </div>
       </div>
 
-      <div className="rodape-direitos">
-        <p>IFCE Campus Tabuleiro do Norte - Disciplina de Web 2</p>
+      <div className="container rodape-inferior">
+        <p className="rodape-copyright">
+          © 2025 Arena Solar. Todos os direitos reservados.
+        </p>
+        <p className="rodape-slogan">
+          Jogue mais. Viva melhor.
+        </p>
       </div>
     </footer>
   );
 }
 
 export default Rodape;
-

@@ -49,14 +49,14 @@
   line-height: 1.05;
   text-transform: uppercase;
   color: #ffffff;
-  margin: 0 0 14px 0;
+  margin-bottom: 14px;
 }
 
 .subtitulo-cadastro {
   color: #8fa8ad;
   font-size: 13.5px;
   line-height: 1.5;
-  margin: 0 0 26px 0;
+  margin-bottom: 26px;
 }
 
 .box-atletas {
@@ -79,11 +79,6 @@
 
 .box-atletas-topo span {
   color: #ffffff;
-}
-
-.status-vagas {
-  color: #e88936;
-  font-size: 11px;
 }
 
 .lista-atletas {
@@ -127,13 +122,12 @@
   font-size: 12px;
   font-weight: bold;
   color: #ffffff;
-  margin: 0 0 2px 0;
+  margin-bottom: 2px;
 }
 
 .atleta-telefone {
   font-size: 10.5px;
   color: #7d969b;
-  margin: 0;
 }
 
 .atleta-modalidade-badge {
@@ -155,13 +149,9 @@
   width: 100%;
   max-width: 430px;
   color: #061c2b;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .card-formulario-topo {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   margin-bottom: 18px;
 }
 
@@ -171,12 +161,6 @@
   font-weight: normal;
   text-transform: uppercase;
   color: #061c2b;
-  margin: 0;
-}
-
-.tempo-cadastro {
-  font-size: 10px;
-  color: #999999;
 }
 
 .campo-grupo {
@@ -194,7 +178,8 @@
   margin-bottom: 5px;
 }
 
-.campo-grupo input {
+.campo-grupo input,
+.campo-grupo select {
   background-color: #f3f4f6;
   border: 1px solid #e5e7eb;
   border-radius: 2px;
@@ -202,45 +187,18 @@
   font-size: 12.5px;
   color: #061c2b;
   outline: none;
+  font-family: inherit;
+  width: 100%;
 }
 
-.campo-grupo input:focus {
+.campo-grupo select {
+  cursor: pointer;
+}
+
+.campo-grupo input:focus,
+.campo-grupo select:focus {
   border-color: #e88936;
   background-color: #ffffff;
-}
-
-.botoes-modalidades {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-}
-
-.botao-opcao-modalidade {
-  background-color: #f3f4f6;
-  border: 1px solid #e5e7eb;
-  border-radius: 2px;
-  padding: 8px 2px;
-  font-size: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #061c2b;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.15s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-}
-
-.botao-opcao-modalidade:hover {
-  background-color: #e5e7eb;
-}
-
-.botao-opcao-modalidade.ativo {
-  background-color: #072b31;
-  border-color: #072b31;
-  color: #ffffff;
 }
 
 .botao-enviar-cadastro {
@@ -257,11 +215,6 @@
   cursor: pointer;
   margin-top: 6px;
   margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  transition: background-color 0.2s;
 }
 
 .botao-enviar-cadastro:hover {
@@ -272,7 +225,6 @@
   text-align: center;
   font-size: 10px;
   color: #888888;
-  margin: 0;
 }
 
 .alerta-erro {
@@ -299,7 +251,7 @@
   text-align: center;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 768px) {
   .secao-cadastro .container {
     flex-direction: column;
     align-items: center;
@@ -312,14 +264,8 @@
   .card-formulario {
     max-width: 100%;
   }
-}
 
-@media (max-width: 480px) {
   .titulo-cadastro {
     font-size: 34px;
-  }
-
-  .botoes-modalidades {
-    grid-template-columns: 1fr;
   }
 }

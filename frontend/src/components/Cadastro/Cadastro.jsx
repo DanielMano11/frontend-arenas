@@ -2,42 +2,48 @@ import { useState } from 'react';
 import './Cadastro.css';
 
 export function Cadastro() {
+  // Controle de estado individual para cada campo do formulario
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [telefone, setTelefone] = useState('');
-  const [modalidade, setModalidade] = useState('Beach Tennis');
+  const [modalidade, setModalidade] = useState('');
   const [mensagemErro, setMensagemErro] = useState('');
   const [mensagemSucesso, setMensagemSucesso] = useState('');
 
+  // Lista de atletas cadastrados armazenada em estado
   const [listaAtletas, setListaAtletas] = useState([
     {
-      iniciais: 'MS',
-      nome: 'Marino Salles',
-      telefone: '(11) 9****-1842',
-      modalidade: 'BEACH TENNIS'
+      iniciais: 'DM',
+      nome: 'Daniel Mano',
+      telefone: '(88) 9****-7986',
+      modalidade: 'VÔLEI DE PRAIA'
     },
     {
-      iniciais: 'LA',
-      nome: 'Lucas Andrade',
-      telefone: '(11) 9****-9236',
+      iniciais: 'DS',
+      nome: 'Daniel Souza',
+      telefone: '(88) 9****-9236',
       modalidade: 'FUTEVÔLEI'
     }
   ]);
 
   function enviarCadastro(event) {
+    // Evita o recarregamento padrao da pagina ao enviar o formulario
     event.preventDefault();
 
+    // Validacao simples com if tradicional
     if (nome === '' || email === '' || telefone === '' || modalidade === '') {
       setMensagemErro('Por favor, preencha todos os campos obrigatórios.');
       setMensagemSucesso('');
       return;
     }
 
+    // Cria as iniciais para o avatar
     const partes = nome.trim().split(' ');
     const iniciais = partes.length > 1
       ? (partes[0][0] + partes[partes.length - 1][0]).toUpperCase()
       : nome.substring(0, 2).toUpperCase();
 
+    // Formata o telefone ocultando parte dos digitos
     const telFormatado = telefone.length > 5
       ? telefone.substring(0, 5) + '****-' + telefone.slice(-4)
       : telefone;
@@ -49,14 +55,16 @@ export function Cadastro() {
       modalidade: modalidade.toUpperCase()
     };
 
+    // Adiciona o novo cadastro no topo da lista
     setListaAtletas([novoAtleta, ...listaAtletas]);
     setMensagemSucesso('Cadastro confirmado com sucesso na Arena!');
     setMensagemErro('');
 
+    // Limpa os campos voltando os estados para string vazia
     setNome('');
     setEmail('');
     setTelefone('');
-    setModalidade('Beach Tennis');
+    setModalidade('');
   }
 
   return (
@@ -80,8 +88,7 @@ export function Cadastro() {
 
           <div className="box-atletas">
             <div className="box-atletas-topo">
-              <span>ENTRARAM NA ARENA</span>
-              <span className="status-vagas">● 14 VAGAS</span>
+              <span>NOSSOS ATLETAS</span>
             </div>
 
             <div className="lista-atletas">
@@ -104,7 +111,6 @@ export function Cadastro() {
         <div className="card-formulario">
           <div className="card-formulario-topo">
             <h3>CADASTRO DE ATLETA</h3>
-            <span className="tempo-cadastro">Leva menos de 1 minuto</span>
           </div>
 
           {mensagemErro !== '' && (
@@ -147,56 +153,33 @@ export function Cadastro() {
                 type="tel"
                 value={telefone}
                 onChange={(e) => setTelefone(e.target.value)}
-                placeholder="(11) 99999-9999"
+                placeholder="(88) 99999-9999"
                 required
               />
             </div>
 
             <div className="campo-grupo">
-              <label>MODALIDADE DE INTERESSE</label>
-              <div className="botoes-modalidades">
-                <label className={modalidade === 'Beach Tennis' ? 'botao-opcao-modalidade ativo' : 'botao-opcao-modalidade'}>
-                  <input
-                    type="radio"
-                    name="modalidade"
-                    value="Beach Tennis"
-                    checked={modalidade === 'Beach Tennis'}
-                    onChange={(e) => setModalidade(e.target.value)}
-                    style={{ display: 'none' }}
-                  />
-                  BEACH TENNIS
-                </label>
-                <label className={modalidade === 'Vôlei de Praia' ? 'botao-opcao-modalidade ativo' : 'botao-opcao-modalidade'}>
-                  <input
-                    type="radio"
-                    name="modalidade"
-                    value="Vôlei de Praia"
-                    checked={modalidade === 'Vôlei de Praia'}
-                    onChange={(e) => setModalidade(e.target.value)}
-                    style={{ display: 'none' }}
-                  />
-                  VÔLEI DE PRAIA
-                </label>
-                <label className={modalidade === 'Futevôlei' ? 'botao-opcao-modalidade ativo' : 'botao-opcao-modalidade'}>
-                  <input
-                    type="radio"
-                    name="modalidade"
-                    value="Futevôlei"
-                    checked={modalidade === 'Futevôlei'}
-                    onChange={(e) => setModalidade(e.target.value)}
-                    style={{ display: 'none' }}
-                  />
-                  FUTEVÔLEI
-                </label>
-              </div>
+              <label htmlFor="modalidade">MODALIDADE DE INTERESSE</label>
+              <select
+                id="modalidade"
+                value={modalidade}
+                onChange={(e) => setModalidade(e.target.value)}
+                required
+                className="select-modalidade"
+              >
+                <option value="">Selecione uma modalidade</option>
+                <option value="Beach Tennis">Beach Tennis</option>
+                <option value="Vôlei de Praia">Vôlei de Praia</option>
+                <option value="Futevôlei">Futevôlei</option>
+              </select>
             </div>
 
             <button type="submit" className="botao-enviar-cadastro">
-              CONFIRMAR CADASTRO NA ARENA →
+              CONFIRMAR CADASTRO NA ARENA
             </button>
 
             <p className="seguranca-dados">
-              ✓ Seus dados ficam seguros com a gente
+              Seus dados ficam seguros com a gente
             </p>
           </form>
         </div>

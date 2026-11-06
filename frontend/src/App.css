@@ -8,45 +8,36 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 40px;
-  width: calc(100% - 40px);
+  gap: 30px;
   max-width: 1200px;
-  margin: 40px auto 10px;
+  margin: 40px auto 15px;
+  padding: 0 20px;
   color: #061c2b;
 }
 
 .cabecalho-experiencias small {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+  display: block;
+  margin-bottom: 6px;
   color: #e88936;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: bold;
   letter-spacing: 1px;
-}
-
-.cabecalho-experiencias small::before {
-  content: '';
-  width: 28px;
-  height: 1px;
-  background-color: #e88936;
 }
 
 .cabecalho-experiencias h2 {
   font-family: 'Anton', Impact, sans-serif;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: normal;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
 .cabecalho-experiencias h2 span {
-  text-decoration: underline #f2994a 2px;
-  text-underline-offset: 8px;
+  border-bottom: 3px solid #f2994a;
 }
 
-.cabecalho-experiencias > p {
+.cabecalho-experiencias p {
   max-width: 230px;
   padding: 5px 0 5px 20px;
   border-left: 1px solid #dddddd;
@@ -54,22 +45,14 @@
   line-height: 1.5;
 }
 
-@media (max-width: 1100px) {
-  .cabecalho-experiencias h2 {
-    font-size: 36px;
-  }
-}
-
 @media (max-width: 768px) {
   .cabecalho-experiencias {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
-    width: calc(100% - 30px);
+    gap: 15px;
   }
 
   .cabecalho-experiencias h2 {
     font-size: 32px;
   }
-
 }

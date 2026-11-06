@@ -6,7 +6,7 @@ export function Header() {
     <div>
       <Cabecalho />
 
-      <section className="banner">
+      <section className="banner" id="inicio">
         <div className="container">
           <div className="conteudo-banner">
             <div className="tag">

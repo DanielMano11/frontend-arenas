@@ -48,14 +48,15 @@ function App() {
           </div>
         </section>
 
-        <section className="modalidades" id="modalidades" aria-labelledby="titulo-modalidades">
+        <section className="modalidades" id="modalidades">
           <header className="cabecalho-experiencias">
             <div>
               <small>MODALIDADES</small>
-              <h2 id="titulo-modalidades">Seu jogo. <span>Sua areia.</span></h2>
+              <h2>Seu jogo. <span>Sua areia.</span></h2>
             </div>
             <p>Três modalidades. A mesma energia.</p>
           </header>
+
           <div className="esportes">
             <CartaoEsporte
               numero="01"
