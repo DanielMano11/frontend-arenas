@@ -39,14 +39,14 @@ export function Rodape() {
           </div>
           <div className="rodape-info-contato">
             <a href="mailto:contato@arenasolar.com.br" className="rodape-email">contato@arenasolar.com.br</a>
-            <a href="tel:1134567890" className="rodape-telefone">(11) 3456-7890</a>
+            <a href="tel:1134567890" className="rodape-telefone">(88) 99623-7986</a>
           </div>
         </div>
       </div>
 
       <div className="container rodape-inferior">
         <p className="rodape-copyright">
-          © 2025 Arena Solar. Todos os direitos reservados.
+          © 2026 Arena Solar. Todos os direitos reservados.
         </p>
         <p className="rodape-slogan">
           Jogue mais. Viva melhor.

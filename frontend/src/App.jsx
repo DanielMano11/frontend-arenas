@@ -1,4 +1,5 @@
 import { Header } from './components/Header/Header';
+import { Sobre } from './components/Sobre/Sobre';
 import { CartaoExperiencia } from './components/Cards/CardExperiencia/CardExperiencia';
 import { CartaoEsporte } from './components/Cards/CardEsportes/CardEsporte';
 import { Cadastro } from './components/Cadastro/Cadastro';
@@ -12,7 +13,6 @@ function App() {
 
       <main>
         <section className="secao-experiencias" id="estrutura">
-          <div id="sobre"></div>
           <header className="cabecalho-experiencias">
             <div>
               <small>POR QUE JOGAR AQUI</small>
@@ -81,7 +81,7 @@ function App() {
             />
           </div>
         </section>
-
+        <Sobre />
         <Cadastro />
       </main>
 

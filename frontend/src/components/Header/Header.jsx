@@ -10,7 +10,6 @@ export function Header() {
         <div className="container">
           <div className="conteudo-banner">
             <div className="tag">
-              <span className="linha"></span>
               <p>ESPORTE DE AREIA. ENERGIA DE VERDADE.</p>
             </div>
 

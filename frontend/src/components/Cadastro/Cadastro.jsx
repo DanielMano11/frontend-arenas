@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './Cadastro.css';
 
 export function Cadastro() {
-  // Controle de estado individual para cada campo do formulario
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [telefone, setTelefone] = useState('');
@@ -10,7 +9,6 @@ export function Cadastro() {
   const [mensagemErro, setMensagemErro] = useState('');
   const [mensagemSucesso, setMensagemSucesso] = useState('');
 
-  // Lista de atletas cadastrados armazenada em estado
   const [listaAtletas, setListaAtletas] = useState([
     {
       iniciais: 'DM',
@@ -27,23 +25,19 @@ export function Cadastro() {
   ]);
 
   function enviarCadastro(event) {
-    // Evita o recarregamento padrao da pagina ao enviar o formulario
     event.preventDefault();
 
-    // Validacao simples com if tradicional
     if (nome === '' || email === '' || telefone === '' || modalidade === '') {
       setMensagemErro('Por favor, preencha todos os campos obrigatórios.');
       setMensagemSucesso('');
       return;
     }
 
-    // Cria as iniciais para o avatar
     const partes = nome.trim().split(' ');
     const iniciais = partes.length > 1
       ? (partes[0][0] + partes[partes.length - 1][0]).toUpperCase()
       : nome.substring(0, 2).toUpperCase();
 
-    // Formata o telefone ocultando parte dos digitos
     const telFormatado = telefone.length > 5
       ? telefone.substring(0, 5) + '****-' + telefone.slice(-4)
       : telefone;
@@ -55,12 +49,10 @@ export function Cadastro() {
       modalidade: modalidade.toUpperCase()
     };
 
-    // Adiciona o novo cadastro no topo da lista
     setListaAtletas([novoAtleta, ...listaAtletas]);
     setMensagemSucesso('Cadastro confirmado com sucesso na Arena!');
     setMensagemErro('');
 
-    // Limpa os campos voltando os estados para string vazia
     setNome('');
     setEmail('');
     setTelefone('');
@@ -72,7 +64,6 @@ export function Cadastro() {
       <div className="container">
         <div className="cadastro-info">
           <div className="tag-cadastro">
-            <span className="linha"></span>
             <span>FAÇA PARTE DA ARENA</span>
           </div>
 
