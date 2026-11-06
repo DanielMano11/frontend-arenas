@@ -31,7 +31,6 @@
 .tag p {
   font-weight: bold;
   font-size: 13px;
-  margin: 0;
 }
 
 .titulo-banner {
@@ -39,7 +38,7 @@
   font-weight: bold;
   font-style: italic;
   line-height: 1.1;
-  margin: 0 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .laranja {
@@ -49,13 +48,13 @@
 .frase-forte {
   font-size: 18px;
   font-weight: bold;
-  margin: 0 0 5px 0;
+  margin-bottom: 5px;
 }
 
 .frase-comum {
   font-size: 15px;
   color: #e0e0e0;
-  margin: 0 0 25px 0;
+  margin-bottom: 25px;
 }
 
 .botao-banner {

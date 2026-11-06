@@ -48,11 +48,6 @@
   padding: 10px 15px;
 }
 
-.botao-atleta .seta {
-  background-color: #f2994a;
-  color: #0f2b2e;
-}
-
 @media (max-width: 768px) {
   .cabecalho {
     padding: 15px;

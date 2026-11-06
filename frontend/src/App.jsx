@@ -1,5 +1,6 @@
 ﻿import { Header } from './components/Header/Header';
 import { CartaoExperiencia } from './components/Cards/CardExperiencia/CardExperiencia';
+import { CartaoEsporte } from './components/Cards/CardEsportes/CardEsporte';
 import './App.css';
 
 function App() {
@@ -40,6 +41,38 @@ function App() {
           texto="Redes oficiais, iluminação profissional e recuo seguro."
         />
       </div>
+      <section className="modalidades" id="modalidades" aria-labelledby="titulo-modalidades">
+        <header className="cabecalho-experiencias">
+          <div>
+            <small>MODALIDADES</small>
+            <h2 id="titulo-modalidades">Seu jogo. <span>Sua areia.</span></h2>
+          </div>
+          <p>Três modalidades. A mesma energia.</p>
+        </header>
+        <div className="esportes">
+          <CartaoEsporte
+            numero="01"
+            imagem="/images/categorias/beach.png"
+            titulo="Beach Tennis"
+            categoria="Raquete + explosão"
+            texto="Dinamismo e social em cada ponto."
+          />
+          <CartaoEsporte
+            numero="02"
+            imagem="/images/categorias/volei.png"
+            titulo="Vôlei de praia"
+            categoria="Salto + equipe"
+            texto="Técnica e potência em grande sintonia."
+          />
+          <CartaoEsporte
+            numero="03"
+            imagem="/images/categorias/futvolei.png"
+            titulo="Futvôlei"
+            categoria="Controle + estilo"
+            texto="Habilidade, criatividade e pura maresia."
+          />
+        </div>
+      </section>
 
     </div>
   );

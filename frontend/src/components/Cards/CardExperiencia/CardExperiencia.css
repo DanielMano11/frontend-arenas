@@ -60,7 +60,6 @@
   gap: 10px;
   font-size: 13px;
   font-weight: bold;
-  color: #ffffff;
 }
 
 .numero-experiencia::after {
@@ -75,13 +74,12 @@
 }
 
 .conteudo-experiencia h3 {
-  margin: 0 0 6px 0;
+  margin-bottom: 6px;
   font-family: 'Anton', Impact, sans-serif;
   font-size: 21px;
   font-weight: normal;
   line-height: 1.15;
   text-transform: uppercase;
-  color: #ffffff;
 }
 
 .cartao-destaque .conteudo-experiencia h3 {
@@ -89,7 +87,6 @@
 }
 
 .conteudo-experiencia p {
-  margin: 0;
   font-size: 12.5px;
   line-height: 1.4;
   color: #b0c7cb;
@@ -100,7 +97,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 24px;
-  background-color: #072b31;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #ffffff;
   text-decoration: none;
@@ -124,8 +120,7 @@
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 50%;
   font-size: 14px;
-  color: #ffffff;
-  transition: all 0.2s;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 
 .botao-estrutura:hover .seta-estrutura {
@@ -138,15 +133,20 @@
   .experiencias {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 20px;
   }
 
-  .cartao-destaque {
+  .cartao-experiencia.cartao-destaque {
     grid-row: auto;
     height: 380px;
   }
 
   .cartao-experiencia {
     height: 230px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experiencias {
+    width: calc(100% - 30px);
   }
 }
